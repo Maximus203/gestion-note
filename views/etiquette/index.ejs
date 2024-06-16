@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etiquette</title>
+    <link rel="stylesheet" href="../css/output.css">
+</head>
+
+<body>
+    <main class="h-screen bg-slate-200">
+        <h1 class="text-4xl">Liste des étiquettes</h1>
+
+        <ul>
+            <% etiquettes.forEach((etiquette)=>{ %>
+                <li>
+                    <%= etiquette.nom_etiquette %>
+                </li>
+                <% }); %>
+
+        </ul>
+    </main>
+
+</body>
+
+</html>

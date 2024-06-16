@@ -1,6 +1,11 @@
 const connexion = require('../../models/db');
 let conn = connexion();
 
+/**
+ * 
+ * @param {string} nomEtiquette 
+ * @returns boolean
+ */
 function creerEtiquette(nomEtiquette) {
     return new Promise((resolve, reject) => {
         conn.connect();
@@ -17,6 +22,10 @@ function creerEtiquette(nomEtiquette) {
     });
 }
 
+/**
+ * 
+ * @returns data
+ */
 function listeEtiquettes() {
     return new Promise((resolve, reject) => {
         conn.connect();
@@ -30,11 +39,3 @@ function listeEtiquettes() {
 
 
 module.exports = { creerEtiquette, listeEtiquettes };
-
-
-// conn.connect();
-// conn.query('SELECT 1 + 1 AS solution', function (error, results, fields) {
-//     if (error) throw error;
-//     console.log('The solution is: ', results[0].solution);
-// });
-// conn.end();
